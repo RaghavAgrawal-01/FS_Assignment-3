@@ -1,0 +1,86 @@
+<html>
+<head>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .background-image {
+			background-image: url(japan-background.avif);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .foreground-images {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 2;
+            /* width: calc(100% - 40px); full width minus the padding */
+        }
+
+        .image-text-pair {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* space between image and text */
+        }
+
+        .foreground-image {
+            width: 145px;
+            height: auto;
+            box-shadow: 0 0 20px 10px white; /* white shadow around the image */
+        }
+
+        .text-box {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.6); /* semi-transparent white background */
+            box-shadow: 0 0 20px 10px white; /* white shadow around the text box */
+            width: calc(100% - 340px); /* full width minus image width and gap */
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://images.app.goo.gl/9m8cbRodkmhZXsb37" class="background-image">
+        <div class="foreground-images">
+            <div class="image-text-pair">
+                <img src="genya shinazugawa.jpg" class="foreground-image">
+                <div class="text-box">
+                    <p>Genya's bond with Tanjiro is deep and bright, A brotherly love that guides through the night. However, as Genya demonstrates his bravery and determination, Sanemi begins to acknowledge his brother's strength and growth, eventually fostering a more supportive bond. </p>
+                </div>
+            </div>
+
+            <div class="image-text-pair">
+                <img src="tanjiro.jpg" class="foreground-image">
+                <div class="text-box">
+                    <p>"His deceased father, Tanjiro Kamado, instilled in him the values of kindness and resilience, guiding him even in spirit.Tanjiro Kamado's journey as a demon slayer is deeply intertwined with the guidance and teachings of Sakonji Urokodaki, his mentor. Under Urokodaki's tutelage, Tanjiro not only mastered the Water Breathing technique but also imbibed principles of compassion and resilience."</p>
+                </div>
+            </div>
+            <div class="image-text-pair">
+                <img src="nezuko.webp" class="foreground-image">
+                <div class="text-box">
+                    <p>Nezuko Kamado's connection with her brother Tanjiro is the heart of her existence as both a demon and a protector. Despite being transformed into a demon, Nezuko retains her humanity, largely due to the unwavering bond she shares with Tanjiro. From their childhood memories to their shared determination to avenge their family and protect others, their sibling bond transcends the boundaries of their current circumstances.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
